@@ -29,7 +29,7 @@ void areapickingcallback(const pcl::visualization::AreaPickingEvent &event,void 
 }
 int main() {
     pcl::visualization::PCLVisualizer::Ptr viewer(new pcl::visualization::PCLVisualizer("Carviewer"));
-    pcl::io::loadPCDFile("/home/allen/soft/VTK-PCL/pcl-pcl-1.9.1/test/car6.pcd",*cloud);
+    pcl::io::loadPCDFile("car6.pcd",*cloud);
     viewer->setBackgroundColor(0,0,0);
     viewer->addPointCloud(cloud,"car");
     viewer->registerAreaPickingCallback(areapickingcallback);
